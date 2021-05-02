@@ -1,22 +1,29 @@
-import logo from './logo.svg';
+
+import {Greeting} from './Greeting';
 import './App.css';
+import { PeopleList } from './PeopleList';
+import {ClickMe} from './ClickMe';
+import { StateUse } from './State_Use';
 
 function App() {
+  const people = [{
+    name : 'Mohit',
+    age : 25,
+  },
+  {
+    name : 'Mayank',
+    age : 24,
+  }
+];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Greeting name="Mohit" message={25}/>
+        <PeopleList people = {people}/>
+        <ClickMe />
+        <StateUse />
+        
       </header>
     </div>
   );
